@@ -2,7 +2,7 @@
 Multimodal Sign Language Knowledge Graph and Representation: Text, Video KeyFrames, and Motion Trajectories
 ## Installation
 ```bash
-$ git clone https://github.com/yourusername/SLKG.git
+$ git clone https://github.com/Lzq19/SIGN-MMKG.git
 $ cd SIGM-MMKG
 $ conda env create -f sign-mmkg.yml
 $ conda activate sign-mmkg

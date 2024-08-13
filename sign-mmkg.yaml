@@ -1,4 +1,4 @@
-name: mmkg-self
+name: sign-mmkg
 channels:
   - conda-forge
   - defaults

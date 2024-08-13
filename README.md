@@ -5,6 +5,7 @@ Multimodal Sign Language Knowledge Graph and Representation: Text, Video KeyFram
 $ git clone https://github.com/yourusername/SLKG.git
 $ cd SIGM-MMKG
 $ conda env create -f sign-mmkg.yml
+$ conda activate sign-mmkg
 ```
 ## Dataset
 ```bash

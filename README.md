@@ -9,8 +9,7 @@ $ conda activate sign-mmkg
 ```
 ## Dataset
 ```bash
-$ link：https://pan.baidu.com/s/172flnNFWnecRyqJfRzixug?pwd=hiaz
-$ code：hiaz
+$ https://drive.google.com/file/d/1AP12UvwF1giPJzN1HR11DZ9wp30hiODU/view?usp=drive_link
 ```
 First, get the dataset from the link above. Then place the data according to the following structure.
 ```

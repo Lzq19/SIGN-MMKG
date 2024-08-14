@@ -21,7 +21,7 @@ First, get the dataset from the link above. Then place the data according to the
 ```
 ## Train
 ```bash
-$ pyhton SIGN-MMKG/main.py
+$ pyhton SIGN-MMKG/train.py
 ```
 ## Test
 ```bash

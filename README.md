@@ -8,8 +8,8 @@ $ conda env create -f sign-mmkg.yml
 $ conda activate sign-mmkg
 ```
 ## Dataset
-```bash
-$ https://drive.google.com/file/d/1AP12UvwF1giPJzN1HR11DZ9wp30hiODU/view?usp=drive_link
+```
+https://drive.google.com/file/d/1AP12UvwF1giPJzN1HR11DZ9wp30hiODU/view?usp=drive_link
 ```
 First, get the dataset from the link above. Then place the data according to the following structure.
 ```

@@ -176,12 +176,12 @@ def score_t_i(batch_text_embeddings,batch_image_embeddings,batch_prime_text_embe
     avg_expression_prime = (head_prime_embeddings_sum + image_prime_embeddings_sum) / 2 - tail_embeddings_sum
     score_prime = torch.norm(avg_expression_prime, p=2).unsqueeze(0)
 
-    max_term = torch.max(torch.tensor([0]), score + CFG.gamma - score_prime)
+    max_term = torch.max(torch.tensor([0.0]), score + CFG.gamma - score_prime)
     return max_term
 
 def score_m_i(batch_image_embeddings,batch_motion_embeddings,batch_prime_image_embeddings):
-    score = torch.tensor([0])
-    score_prime = torch.tensor([0])
+    score = torch.tensor([0.0])
+    score_prime = torch.tensor([0.0])
 
     length = len(batch_image_embeddings)
     length_prime = len(batch_prime_image_embeddings)
@@ -191,13 +191,13 @@ def score_m_i(batch_image_embeddings,batch_motion_embeddings,batch_prime_image_e
         for k in range(length-2):
             current_s = torch.norm(batch_image_embeddings[k] + batch_motion_embeddings[k] - batch_image_embeddings[k+1],
                                    p=2).unsqueeze(0)
-            score += torch.max(torch.tensor([0]), current_s)
+            score += torch.max(torch.tensor([0.0]), current_s)
         if length_prime > 1:
             for m in range(length_prime-2):
                 current_s_prime = torch.norm(batch_prime_image_embeddings[m] + batch_motion_embeddings[m] -
                                              batch_prime_image_embeddings[m+1], p=2).unsqueeze(0)
-                score_prime += torch.max(torch.tensor([0]), current_s_prime)
-        score_total = torch.max(torch.tensor([0]), score + CFG.gamma - score_prime)
+                score_prime += torch.max(torch.tensor([0.0]), current_s_prime)
+        score_total = torch.max(torch.tensor([0.0]), score + CFG.gamma - score_prime)
     else:
-        score_total = torch.max(torch.tensor([0]), score + CFG.gamma - score_prime)
+        score_total = torch.max(torch.tensor([0.0]), score + CFG.gamma - score_prime)
     return score_total

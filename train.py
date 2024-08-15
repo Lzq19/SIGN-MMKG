@@ -80,7 +80,7 @@ def train_epoch_deepspeed(model_engine, train_loader):
 
         model_engine.backward(loss)
         model_engine.step()
-        count = batch["image"].size(0)
+        count = batch["image"][0].size(0)
         loss_meter.update(loss.item(), count)
 
         tqdm_object.set_postfix(train_loss=loss_meter.avg, lr=get_lr(model_engine.optimizer))
